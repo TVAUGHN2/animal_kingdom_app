@@ -1,0 +1,9 @@
+
+<div>
+    <div *ngFor = "let row of rows" class= "row-style" [ngStyle]="{'background-color': + row.color}">
+        <h1>LEVEL {{row.level}}</h1>
+        <app-pyramid-row [level]= "row.level">
+        </app-pyramid-row>
+    </div> 
+</div>
+

@@ -1,0 +1,8 @@
+<div>
+  <div class = "flex-line">
+    <div class = "flex-item" *ngFor = "let animal of animals">
+        <div><img src={{animal.imgUrl}} class="img-style"></div>
+        <div>{{animal.name}} the {{animal.type}}</div>
+    </div>
+  </div>
+</div>
