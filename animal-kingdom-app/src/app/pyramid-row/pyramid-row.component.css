@@ -1,6 +1,7 @@
 .flex-line{
     display: -webkit-flex;
     display: flex;
+    justify-content: center;
     
 }
 

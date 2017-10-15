@@ -1,8 +1,8 @@
 
 <div>
-    <div *ngFor = "let row of rows" class= "row-style" [ngStyle]="{'background-color': + row.color}">
-        <h1>LEVEL {{row.level}}</h1>
-        <app-pyramid-row [level]= "row.level">
+  <h1>ANIMAL KINGDOM</h1>
+    <div *ngFor = "let pyramidRow of pyramid.pyramidRows" class= "row-style" [ngStyle]="{'background-color': + pyramidRow.color}">
+        <app-pyramid-row [animals]= "pyramidRow.animals">
         </app-pyramid-row>
     </div> 
 </div>

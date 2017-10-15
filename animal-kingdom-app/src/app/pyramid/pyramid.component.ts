@@ -1,5 +1,6 @@
 import { Component, Output, OnInit } from '@angular/core';
-import { Row } from './pyramid.model'
+import { Pyramid } from './pyramid.model'
+import { PyramidService } from '../pyramid.service'
 
 @Component({
   selector: 'app-pyramid',
@@ -7,21 +8,18 @@ import { Row } from './pyramid.model'
   styleUrls: ['./pyramid.component.css']
 })
 export class PyramidComponent implements OnInit {
-  @Output() rows: Row[];
-
-  constructor() { 
-    this.rows = []; // initialize
-
+  pyramid: Pyramid;
+  constructor(private pyramidService: PyramidService) { 
+    this.pyramid = new Pyramid();
   }
-
-  ngOnInit() {
-
-    // populate levels of the animal kingdom
-    this.rows.push(new Row(1, "#F0F8FF"));
-    this.rows.push(new Row(2, "#FAEBD7"));
-    this.rows.push(new Row(3, "#00CED1"));
-    this.rows.push(new Row(4, "#F08080"));
-    this.rows.push(new Row(5, "#EE82EE"));
+  
+  getPyramid(): void {
+    this.pyramid.pyramidRows = this.pyramidService.getPyramid();
   }
-
+  
+  ngOnInit(): void {
+    this.getPyramid();
+  }
 }
+
+//[ngStyle]="{'background-color': + pyramidRow.color}"

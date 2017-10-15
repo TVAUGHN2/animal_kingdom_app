@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { PyramidComponent } from './pyramid/pyramid.component';
 import { PyramidRowComponent } from './pyramid-row/pyramid-row.component';
 
+import { PyramidService } from './pyramid.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,7 @@ import { PyramidRowComponent } from './pyramid-row/pyramid-row.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PyramidService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
