@@ -18,8 +18,4 @@ import { Pyramid } from './pyramid/pyramid.model'
 
 })
 export class AppComponent {
-  title = 'app works!';
-
-  constructor(private pyramidService: PyramidService){}
-  
 }
